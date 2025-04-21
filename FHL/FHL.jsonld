@@ -1,142 +1,194 @@
 {
-	"@context": {	
-        "cargo": "https://onerecord.iata.org/ns/cargo#",
-        "code": "https://onerecord.iata.org/ns/code-lists/"
-    },
-	"@type":"cargo:Waybill",
-	"cargo:waybillType": {
-        "@id": "cargo:MASTER"
-    },
-	"cargo:waybillPrefix":"",
-	"cargo:waybillNumber":"",
-    "cargo:arrivalLocation": {
-        "@type": "cargo:Location",
-        "cargo:locationCodes": {
-            "@type": "cargo:CodeListElement",
-            "cargo:code": "KIX"
-        }
-    },
-    "cargo:departureLocation": {
-        "@type": "cargo:Location",
-        "cargo:locationCodes": {
-            "@type": "cargo:CodeListElement",
-            "cargo:code": "TAO"
-        }
-    },
-    "cargo:shipment":{
-		"@id":"https://shipment_example"
+	"@context": {
+		"cargo": "https://onerecord.iata.org/ns/cargo#",
+		"code": "https://onerecord.iata.org/ns/code-lists/"
 	},
-    "cargo:involvedParties":
-    [
-        {
-            "@type": "cargo:Party",
-            "cargo:partydetails":{
-                "@type": "cargo:Organization",
-                "cargo:name": "",
-                "cargo:basedAtLocation":{
-                    "@type":"Location",
-                    "cargo:address":{
-                        "@type":"Address",
-                        "cargo:streetAddressLines":"",
-                        "cargo:cityCode":{
-                            "@type":"CodeListElement",
-                            "cargo:code":""
-                        },
-                        "cargo:regionCode":{
-                            "@type":"CodeListElement",
-                            "cargo:code":""
-                        },
-                        "cargo:country":{
-                            "@type":"CodeListElement",
-                            "cargo:code":""
-                        },
-                        "cargo:postalCode":{
-                            "@type":"CodeListElement",
-                            "cargo:code":""
-                        }
-                    }
-                },
-                "cargo:contactPersons":{
-                    "@type":"Actor",
-                    "cargo:Person":{
-                        "@type":"contactDetails",
-                        "cargo:ContactDetail":{
-                            "cargo:contactDetailType":{
-                                "@type":"ContactDetailType",
-                                "cargo:code":""
-                            }
+	"@type": "cargo:Waybill",
+	"cargo:waybillType": {
+		"@id": "cargo:MASTER"
+	},
+	"cargo:waybillPrefix": "324",
+	"cargo:waybillNumber": "04421351",
+	"cargo:arrivalLocation": {
+		"@type": "cargo:Location",
+		"cargo:locationCodes": {
+			"@type": "cargo:CodeListElement",
+			"cargo:code": "KIX"
+		}
+	},
+	"cargo:departureLocation": {
+		"@type": "cargo:Location",
+		"cargo:locationCodes": {
+			"@type": "cargo:CodeListElement",
+			"cargo:code": "TAO"
+		}
+	},
+	"cargo:shipment": {
+		"@type": "cargo:Shipment",
+		"cargo:pieces": {
+			"cargo:slac": 6
+		},
+		"cargo:totalGrossWeight": {
+			"@type": "cargo:Value",
+			"cargo:numericalValue": "80",
+			"cargo:unit": {
+				"@type": "cargo:CodeListElement",
+				"cargo:code": "https://vocabulary.uncefact.org/WeightUnitMeasureCode#KGM"
+			}
+		}
+	},
+	"cargo:houseWaybills": [{
+			"cargo:waybillType": {
+				"@id": "cargo:HOUSE"
+			},
+			"cargo:waybillNumber": "18000782531",
+			"cargo:arrivalLocation": {
+				"@type": "cargo:Location",
+				"cargo:locationCodes": {
+					"@type": "cargo:CodeListElement",
+					"cargo:code": "KIX"
+				}
+			},
+			"cargo:departureLocation": {
+				"@type": "cargo:Location",
+				"cargo:locationCodes": {
+					"@type": "cargo:CodeListElement",
+					"cargo:code": "TAO"
+				}
+			},
+			"cargo:shipment": {
+				"@type": "cargo:Shipment",
+				"cargo:pieces": {
+					"cargo:slac": 6,
+					"cargo:specialHandlingCodes": ""
+				},
+				"cargo:totalGrossWeight": {
+					"@type": "cargo:Value",
+					"cargo:numericalValue": "80",
+					"cargo:unit": {
+						"@type": "cargo:CodeListElement",
+						"cargo:code": "https://vocabulary.uncefact.org/WeightUnitMeasureCode#KGM"
+					}
+				},
+				"cargo:goodsDescription": "CONSOL GARMENTS",
+				"cargo:customsInformation": {
+					"@type": "cargo:CustomsInformation",
+					"cargo:country": {
+						"@type": "cargo:Country",
+						"cargo:countryCode": {
+							"@type": "cargo:CodeListElement",
+							"cargo:code": "https://vocabulary.uncefact.org/CountryId#CN"
+						}
+					},
+					"cargo:contentCode": {
+						"@type": "cargo:CodeListElement",
+						"cargo:code": ""
+					},
+					"cargo:note": ""
+				}
+			},
+			"cargo:involvedParties": [{
+					"@type": "cargo:Party",
+					"cargo:partydetails": {
+						"@type": "cargo:Organization",
+						"cargo:name": "OCS",
+						"cargo:basedAtLocation": {
+							"@type": "Location",
+							"cargo:address": {
+								"@type": "Address",
+								"cargo:streetAddressLines": "2-1 KEYUANWEI 3RD LAOSHAN DISTRICT QINGDAO",
+								"cargo:cityCode": {
+									"@type": "CodeListElement",
+									"cargo:code": "QingDao"
+								},
 
-                        }
-                    }
-                }
-            }
-        },   
-        {
-            "@type": "cargo:Party",
-            "cargo:partydetails":{
-                "@type": "cargo:Organization",
-                "cargo:name": "",
-                "cargo:basedAtLocation":{
-                    "@type":"Location",
-                    "cargo:address":{
-                        "@type":"Address",
-                        "cargo:streetAddressLines":"",
-                        "cargo:cityCode":{
-                            "@type":"CodeListElement",
-                            "cargo:code":""
-                        },
-                        "cargo:regionCode":{
-                            "@type":"CodeListElement",
-                            "cargo:code":""
-                        },
-                        "cargo:country":{
-                            "@type":"CodeListElement",
-                            "cargo:code":""
-                        },
-                        "cargo:postalCode":{
-                            "@type":"CodeListElement",
-                            "cargo:code":""
-                        }
-                    }
-                },
-                "cargo:contactPersons":{
-                    "@type":"Actor",
-                    "cargo:Person":{
-                        "@type":"contactDetails",
-                        "cargo:ContactDetail":{
-                            "cargo:contactDetailType":{
-                                "@type":"ContactDetailType",
-                                "cargo:code":""
-                            }
+								"cargo:country": {
+									"@type": "CodeListElement",
+									"cargo:code": "https://vocabulary.uncefact.org/CountryId#CN"
+								}
+							}
+						},
+						"cargo:contactPersons": {
+							"@type": "Actor",
+							"cargo:Person": {
+								"@type": "contactDetails",
+								"cargo:ContactDetail": [{
+										"@type": "ContactDetailType",
+										"cargo:ALTERNATE_PHONE_NUMBER": "0532-88699866",
+                                        "cargo:textualValue": "0532-88699875"
+									},
+                                    {
+									"cargo:contactDetailType": {
+										"@type": "ContactDetailType",
+										"cargo:FAX_NUMBER": "0532-88699875"
+									}}
+								]
+							}
+						}
+					}
+				},
+				{
+					"@type": "cargo:Party",
+					"cargo:partydetails": {
+						"@type": "cargo:Organization",
+						"cargo:name": "QINGDAO WINTIME TRADE CO.,LTD",
+						"cargo:basedAtLocation": {
+							"@type": "Location",
+							"cargo:address": {
+								"@type": "Address",
+								"cargo:streetAddressLines": "ROOM 1302,UNIT 1,BUILDING 1,NO.73 TONGDE ROAD,SHIBEI DISTRICT,QINGDAO",
+								"cargo:cityCode": {
+									"@type": "CodeListElement",
+									"cargo:code": "KANSAI"
+								},
+								"cargo:regionCode": {
+									"@type": "CodeListElement",
+									"cargo:code": ""
+								},
+								"cargo:country": {
+									"@type": "CodeListElement",
+									"cargo:code": "https://vocabulary.uncefact.org/CountryId#JP"
+								},
+								"cargo:postalCode": {
+									"@type": "CodeListElement",
+									"cargo:code": ""
+								}
+							}
+						},
+						"cargo:contactPersons": {
+							"@type": "Actor",
+							"cargo:Person": {
+								"@type": "contactDetails",
+								"cargo:ContactDetail": {
+									"cargo:contactDetailType": {
+										"@type": "ContactDetailType",
+										"cargo:code": ""
+									}
 
-                        }
-                    }
-                }
-            }
-        } 
-    ],
-    "cargo:weightValuationIndicator":{
-        "@type": "code:PrepaidCollectIndicator",
-        "@id": "https://onerecord.iata.org/ns/code-lists/PrepaidCollectIndicator#P"
-    },
-    "cargo:otherChargesIndicator":{
-        "@type": "code:PrepaidCollectIndicator",
-        "@id": "https://onerecord.iata.org/ns/code-lists/PrepaidCollectIndicator#P"
-    },
-    "cargo:declaredValueForCarriage":{
-        "@type":"CurrencyValue",
-        "cargo:numericalValue":""
-    },
-    "cargo:declaredValueForCustoms":{
-        "@type":"CurrencyValue",
-        "cargo:numericalValue":""
-    },
-    "cargo:houseWaybills":[
-        {
-            "@id":""
-        },
-        {
-            "@id":""
-        }
-    ]
+								}
+							}
+						}
+					}
+				}
+			],
+			"cargo:weightValuationIndicator": {
+				"@type": "code:PrepaidCollectIndicator",
+				"@id": "https://onerecord.iata.org/ns/code-lists/PrepaidCollectIndicator#P"
+			},
+			"cargo:otherChargesIndicator": {
+				"@type": "code:PrepaidCollectIndicator",
+				"@id": "https://onerecord.iata.org/ns/code-lists/PrepaidCollectIndicator#P"
+			},
+			"cargo:declaredValueForCarriage": {
+				"@type": "CurrencyValue",
+				"cargo:numericalValue": false
+			},
+			"cargo:declaredValueForCustoms": {
+				"@type": "CurrencyValue",
+				"cargo:numericalValue": false
+			}
+
+		}
+
+	]
 }
