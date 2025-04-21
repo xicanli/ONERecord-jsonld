@@ -1,0 +1,32 @@
+{
+    "@context":{
+        "cargo": "https://onerecord.iata.org/ns/cargo#",
+        "code": "https://onerecord.iata.org/ns/code-lists/"
+    },
+    "@type":"cargo:SecurityDeclaration",
+    "cargo:securityStatus":{
+        "@type":"https://onerecord.iata.org/ns/code-lists/SecurityStatus",
+		"@id":""
+	},
+    "cargo:groundsForExemption":{
+        "@type":"https://onerecord.iata.org/ns/code-lists/ScreeningExemption",
+        "@id":""
+    },
+    "cargo:receivedFrom":{
+        "@type":"cargo:RegulatedEntity",
+        "@id":""
+    },
+    "cargo:screeningMethods":[
+        {
+            "@type":"https://onerecord.iata.org/ns/code-lists/ScreeningMethod",
+            "@id":""
+        }
+    ],
+    "cargo:issuedBy":{
+        "@type":"cargo:Person",
+        "cargo:lastName":"",
+        "cargo:firstName":"",
+        "cargo:employeeId":""
+    },
+    "cargo:issuedOn":""
+}

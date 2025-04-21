@@ -1,0 +1,142 @@
+{
+	"@context": {	
+        "cargo": "https://onerecord.iata.org/ns/cargo#",
+        "code": "https://onerecord.iata.org/ns/code-lists/"
+    },
+	"@type":"cargo:Waybill",
+	"cargo:waybillType": {
+        "@id": "cargo:MASTER"
+    },
+	"cargo:waybillPrefix":"",
+	"cargo:waybillNumber":"",
+    "cargo:arrivalLocation": {
+        "@type": "cargo:Location",
+        "cargo:locationCodes": {
+            "@type": "cargo:CodeListElement",
+            "cargo:code": "KIX"
+        }
+    },
+    "cargo:departureLocation": {
+        "@type": "cargo:Location",
+        "cargo:locationCodes": {
+            "@type": "cargo:CodeListElement",
+            "cargo:code": "TAO"
+        }
+    },
+    "cargo:shipment":{
+		"@id":"https://shipment_example"
+	},
+    "cargo:involvedParties":
+    [
+        {
+            "@type": "cargo:Party",
+            "cargo:partydetails":{
+                "@type": "cargo:Organization",
+                "cargo:name": "",
+                "cargo:basedAtLocation":{
+                    "@type":"Location",
+                    "cargo:address":{
+                        "@type":"Address",
+                        "cargo:streetAddressLines":"",
+                        "cargo:cityCode":{
+                            "@type":"CodeListElement",
+                            "cargo:code":""
+                        },
+                        "cargo:regionCode":{
+                            "@type":"CodeListElement",
+                            "cargo:code":""
+                        },
+                        "cargo:country":{
+                            "@type":"CodeListElement",
+                            "cargo:code":""
+                        },
+                        "cargo:postalCode":{
+                            "@type":"CodeListElement",
+                            "cargo:code":""
+                        }
+                    }
+                },
+                "cargo:contactPersons":{
+                    "@type":"Actor",
+                    "cargo:Person":{
+                        "@type":"contactDetails",
+                        "cargo:ContactDetail":{
+                            "cargo:contactDetailType":{
+                                "@type":"ContactDetailType",
+                                "cargo:code":""
+                            }
+
+                        }
+                    }
+                }
+            }
+        },   
+        {
+            "@type": "cargo:Party",
+            "cargo:partydetails":{
+                "@type": "cargo:Organization",
+                "cargo:name": "",
+                "cargo:basedAtLocation":{
+                    "@type":"Location",
+                    "cargo:address":{
+                        "@type":"Address",
+                        "cargo:streetAddressLines":"",
+                        "cargo:cityCode":{
+                            "@type":"CodeListElement",
+                            "cargo:code":""
+                        },
+                        "cargo:regionCode":{
+                            "@type":"CodeListElement",
+                            "cargo:code":""
+                        },
+                        "cargo:country":{
+                            "@type":"CodeListElement",
+                            "cargo:code":""
+                        },
+                        "cargo:postalCode":{
+                            "@type":"CodeListElement",
+                            "cargo:code":""
+                        }
+                    }
+                },
+                "cargo:contactPersons":{
+                    "@type":"Actor",
+                    "cargo:Person":{
+                        "@type":"contactDetails",
+                        "cargo:ContactDetail":{
+                            "cargo:contactDetailType":{
+                                "@type":"ContactDetailType",
+                                "cargo:code":""
+                            }
+
+                        }
+                    }
+                }
+            }
+        } 
+    ],
+    "cargo:weightValuationIndicator":{
+        "@type": "code:PrepaidCollectIndicator",
+        "@id": "https://onerecord.iata.org/ns/code-lists/PrepaidCollectIndicator#P"
+    },
+    "cargo:otherChargesIndicator":{
+        "@type": "code:PrepaidCollectIndicator",
+        "@id": "https://onerecord.iata.org/ns/code-lists/PrepaidCollectIndicator#P"
+    },
+    "cargo:declaredValueForCarriage":{
+        "@type":"CurrencyValue",
+        "cargo:numericalValue":""
+    },
+    "cargo:declaredValueForCustoms":{
+        "@type":"CurrencyValue",
+        "cargo:numericalValue":""
+    },
+    "cargo:houseWaybills":[
+        {
+            "@id":""
+        },
+        {
+            "@id":""
+        }
+    ]
+}
